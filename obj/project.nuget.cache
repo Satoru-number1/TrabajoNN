@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LiB91yNxKqU=",
+  "success": true,
+  "projectFilePath": "/home/wilson/Documentos/Universidad/TecnologiaWebII/clean/clean.csproj",
+  "expectedPackageFiles": [
+    "/home/wilson/.nuget/packages/microsoft.aspnetcore.openapi/10.0.7/microsoft.aspnetcore.openapi.10.0.7.nupkg.sha512",
+    "/home/wilson/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
