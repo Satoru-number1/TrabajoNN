@@ -12,13 +12,15 @@ namespace clean.Dominio.Models
     {
         [Key]
         public int Id_Producto_Categoria { get; set; }
-        public int categoria_id { get; set;}
-        public int producto_id { get; set;}
+        public int categoria_id { get; set; }
+        public int producto_id { get; set; }
+
         [ForeignKey("Id_Categoria")]
         [JsonIgnore]
-        public Categoria categoria { get; set; }
+        public Categoria? categoria { get; set; }
+
         [ForeignKey("Id_Producto")]
         [JsonIgnore]
-        public Producto producto { get; set; }
+        public Producto? producto { get; set; }
     }
 }

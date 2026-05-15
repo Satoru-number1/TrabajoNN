@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net10.0": {
       "Humanizer.Core/2.14.1": {
@@ -2622,29 +2622,36 @@
     ]
   },
   "packageFolders": {
-    "/home/wilson/.nuget/packages/": {}
+    "C:\\Users\\USUARIO\\.nuget\\packages\\": {},
+    "D:\\visual studio\\sdk\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/wilson/Documentos/Universidad/TecnologiaWebII/clean/clean.csproj",
+      "projectUniqueName": "E:\\universidad\\Tecnologia Web 2\\Gestion-producto-categoria\\TrabajoNN\\clean.csproj",
       "projectName": "clean",
-      "projectPath": "/home/wilson/Documentos/Universidad/TecnologiaWebII/clean/clean.csproj",
-      "packagesPath": "/home/wilson/.nuget/packages/",
-      "outputPath": "/home/wilson/Documentos/Universidad/TecnologiaWebII/clean/obj/",
+      "projectPath": "E:\\universidad\\Tecnologia Web 2\\Gestion-producto-categoria\\TrabajoNN\\clean.csproj",
+      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+      "outputPath": "E:\\universidad\\Tecnologia Web 2\\Gestion-producto-categoria\\TrabajoNN\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\visual studio\\sdk\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/wilson/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "/usr/lib/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {}
         }
@@ -2659,10 +2666,11 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net10.0": {
+        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": {
@@ -2707,7 +2715,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.107/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300-preview.0.26177.108/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

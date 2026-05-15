@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace clean.Migrations
 {
     /// <inheritdoc />
-    public partial class m2 : Migration
+    public partial class m1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -48,8 +48,8 @@ namespace clean.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     categoria_id = table.Column<int>(type: "integer", nullable: false),
                     producto_id = table.Column<int>(type: "integer", nullable: false),
-                    Id_Categoria = table.Column<int>(type: "integer", nullable: false),
-                    Id_Producto = table.Column<int>(type: "integer", nullable: false)
+                    Id_Categoria = table.Column<int>(type: "integer", nullable: true),
+                    Id_Producto = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -58,14 +58,12 @@ namespace clean.Migrations
                         name: "FK_Producto_Categorias_Categorias_Id_Categoria",
                         column: x => x.Id_Categoria,
                         principalTable: "Categorias",
-                        principalColumn: "Id_Categoria",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id_Categoria");
                     table.ForeignKey(
                         name: "FK_Producto_Categorias_Productos_Id_Producto",
                         column: x => x.Id_Producto,
                         principalTable: "Productos",
-                        principalColumn: "Id_Producto",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id_Producto");
                 });
 
             migrationBuilder.CreateIndex(

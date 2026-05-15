@@ -11,8 +11,8 @@ using clean.Data;
 namespace clean.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260515142351_m2")]
-    partial class m2
+    [Migration("20260515200354_m1")]
+    partial class m1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -77,10 +77,10 @@ namespace clean.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id_Producto_Categoria"));
 
-                    b.Property<int>("Id_Categoria")
+                    b.Property<int?>("Id_Categoria")
                         .HasColumnType("integer");
 
-                    b.Property<int>("Id_Producto")
+                    b.Property<int?>("Id_Producto")
                         .HasColumnType("integer");
 
                     b.Property<int>("categoria_id")
@@ -102,15 +102,11 @@ namespace clean.Migrations
                 {
                     b.HasOne("clean.Dominio.Models.Categoria", "categoria")
                         .WithMany("productos")
-                        .HasForeignKey("Id_Categoria")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Id_Categoria");
 
                     b.HasOne("clean.Dominio.Models.Producto", "producto")
                         .WithMany("categorias")
-                        .HasForeignKey("Id_Producto")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Id_Producto");
 
                     b.Navigation("categoria");
 

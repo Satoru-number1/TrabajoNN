@@ -10,8 +10,8 @@ namespace clean.Dominio.Models
     {
         [Key]
         public int Id_Categoria { get; set; }
-        public string codigoCategoria { get; set; }
-        public string Nombre { get; set; }
-        public List<Producto_Categoria> productos { get; set; }
+        public string codigoCategoria { get; set; } = string.Empty;
+        public string Nombre { get; set; } = string.Empty;
+        public List<Producto_Categoria>? productos { get; set; }
     }
 }

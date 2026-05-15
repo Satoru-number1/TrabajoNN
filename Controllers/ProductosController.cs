@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using clean.Aplicaccion.Dtos;
 using clean.Data;
+using clean.Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace clean.Controllers
@@ -11,16 +13,36 @@ namespace clean.Controllers
     [Route("api/[controller]")]
     public class ProductosController : ControllerBase
     {
-        private readonly AppDbContext context;
-        public ProductosController(AppDbContext context)
+        private readonly IProductoRepository _context;
+
+        public ProductosController(IProductoRepository context)
         {
-            this.context=context;
+            _context = context;
         }
+
         [HttpGet]
         public async Task<IActionResult> MostrarProductos()
         {
-            
-            return Ok();
+            var productos = await _context.MostrarProductos();
+            return Ok(productos);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> MostrarProductoId(string id)
+        {
+            var producto = await _context.MostrarProductoId(id);
+            if (producto is null)
+                return NotFound();
+            return Ok(producto);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostProducto(ProductoDto productoDto)
+        {
+            var producto = await _context.PostProducto(productoDto);
+            if (producto is null)
+                return BadRequest();
+            return Ok(producto);
         }
     }
 }
