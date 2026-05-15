@@ -58,7 +58,10 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 Aplicaccion/Dtos/
  CategoriaDto.cs
  ProductoDto.cs
-Controllers/ProductosController.cs
+Controllers/
+ CategoriaController.cs
+ ProductosController.cs
+ Producto_CategoriasController.cs
 Dominio/Models/
  Categoria.cs
  Producto.cs

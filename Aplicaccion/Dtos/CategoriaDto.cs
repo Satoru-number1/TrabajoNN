@@ -7,6 +7,7 @@ namespace clean.Aplicaccion.Dtos
 {
     public class CategoriaDto
     {
-        
+        public string codigoCategoria { get; set; }
+        public string Nombre { get; set; }
     }
 }
